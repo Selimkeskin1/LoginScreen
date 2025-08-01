@@ -1,7 +1,10 @@
 package com.loginscreen.ui.screens.unauthenticated.login
 
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.R
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -11,6 +14,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ElevatedCard
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -126,7 +131,39 @@ fun LoginScreen(
 
                 }
             }
+
+            Row(
+                modifier = Modifier.padding(AppTheme.dimens.paddingNormal),
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                // Don't have an account?
+                Text(text = stringResource(id = com.loginscreen.R.string.do_not_have_account))
+
+                //Register
+                Text(
+                    modifier = Modifier
+                        .padding(start = AppTheme.dimens.paddingExtraSmall)
+                        .clickable {
+                            onNavigateToRegistration.invoke()
+                        },
+                    text = stringResource(id = com.loginscreen.R.string.register),
+                    color = MaterialTheme.colorScheme.primary
+                )
+            }
+
+
+
+
+
+
+
+
         }
+
+
+
+
     }
 
 
