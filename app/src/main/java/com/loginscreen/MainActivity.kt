@@ -14,7 +14,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import com.loginscreen.databinding.ActivityMainBinding
 import com.loginscreen.ui.screens.NavigationRoutes
 import com.loginscreen.ui.theme.ComposeLoginTheme
 import com.loginscreen.ui.screens.authenticatedGraph
