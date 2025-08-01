@@ -126,3 +126,9 @@ fun ProvideDimens(
     val dimensionSet = remember { dimensions }
     CompositionLocalProvider(LocalAppDimens provides dimensionSet, content = content)
 }
+
+object AppTheme {
+    val dimens: Dimensions
+        @Composable
+        get() =  LocalAppDimens.current
+}
